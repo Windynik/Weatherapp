@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
+const google=window.google;
 
-class GoogleMaps extends Component{
+class GoogleMap extends Component{
 
     componentDidMount(){
         new google.maps.Map(this.refs.map,{
@@ -12,9 +13,9 @@ class GoogleMaps extends Component{
         });
     }
     render(){
-        return <div ref='map' />
+        return <div ref="map" />;
     }
 
 }
 
-export default GoogleMaps;
+export default GoogleMap;

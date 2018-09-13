@@ -5,7 +5,18 @@ import GoogleMap from '../components/Google-maps'
 
 class WeatherList extends Component{
 
+    
     renderWeather(CityData){
+        if(!CityData){
+            console.log("Couldn't find the city!")
+            return(
+                <tr key={name}>
+                    
+                    <td>Couldn't Find that city :C , Try with the proper spelling! ( it should also be in the USA.. i know.. ;_;) </td>
+                    
+                </tr>
+                );
+        }
         const name=CityData.city.name;
         const temps=CityData.list.map(weather => weather.main.temp)
         const pressures=CityData.list.map(weather => weather.main.pressure)

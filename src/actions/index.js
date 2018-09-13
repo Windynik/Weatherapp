@@ -8,7 +8,6 @@ export function fetchWeather(city){
 
     const url=`${api}&q=${city},us`;
     const request=axios.get(url);
-    
     return ({
         type: FETCH_WEATHER,
         payload: request
